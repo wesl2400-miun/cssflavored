@@ -9,22 +9,22 @@
     <title>Skicka ett meddelande till Webbexpert - Kontakt | Webbexpert</title>
   </head>
   <body>
-    <header>
+    <header class="logo">
       <a href="./index.html">
         <img src="./images/logo.svg" alt="Webbexpert Logotypen">
       </a>
     </header>
-    <nav aria-label="Huvudmeny">
+    <nav class="main-nav" aria-label="Huvudmeny">
       <ul>
         <li><a href="./courses.html">Kurser</a></li>
         <li><a href="./pictures.html">Bilder</a></li>
-        <li><a href="./contact.html">Kontakt</a></li>
+        <li><a class="selected" href="./contact.html">Kontakt</a></li>
         <li><a href="./about.html">Om</a></li>
       </ul>
     </nav>
-    <main>
-      <h1>Kontakt</h1>
-      <form method="post">
+    <main class="main">
+      <h1 class="title">Kontakt</h1>
+      <form class="form" method="post">
         <fieldset>
           <legend>Kontaktformulär</legend>
           <label for="name">Namn</label><br>
@@ -43,7 +43,7 @@
             <option value="IT-supporttekniker">IT-supporttekniker</option>
           </select><br>
           <label for="newsletter">Nyhetsbrev</label><br>
-          <input type="radio" id="newsletter"><br>
+          <input type="radio" name="newsletter" id="newsletter" value="1"><br>
           <label for="message">Meddelande</label><br>
           <textarea id="message" name="message" rows="5"></textarea><br>
           <input type="submit" value="Skicka">
@@ -51,7 +51,7 @@
         </fieldset>
       </form>
     </main>
-    <footer>
+    <footer class="footer">
       <h3>Webbutveckling I DT057G D2095 HT2025</h3>
       <p><time datetime="2025-09-25">2025-09-25</time></p>
       <p>Weronika Sleboda</p>
