@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="./images/webicon.svg">
+    <link rel="preload" href="./css/root.css" as="style">
+    <link rel="stylesheet" href="./css/root.css">
     <title>Anmäl dig till kurser i Webbutveckling - Kurser | Webbexpert</title>
   </head>
   <body>
@@ -145,7 +147,19 @@
   </body>
 </html>
 
-<!--
+<!-- NYA KOMMENTARER 
+** <link rel="preload" href="./css/root.css" as="style"> - hämta filen root.css via den angivna 
+** relativa sökvägen (href='[...]') så fort som möjligt (rel='preload') som en stil (as='style') 
+** Denna kod är prestandaoptimering. 
+** Referens: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/preload
+** Filen root.css ska användas av alla undersidor som en grundstil
+** Den anger varaiabler under :root och CSS regler för hela <body> taggen
+** <link rel="stylesheet" href="./css/root.css"> - hämta CSS stil (rel='stylesheet') via
+** den angivna relativa sökvägen (href='[...]')
+**
+-->
+
+<!-- GAMLA KOMMENTARER - Relterar till uppgift 2.2
 ** <html lang='sv'> sätt standardspråket till svenska, eftersom textinnehållet på webbplatsen
 ** är på svenska. Detta är ett av WCAG:s karv på användartillgängligheten och hjälper skärmläsare
 ** att uttala textinnehållet på webbsidan korrekt
