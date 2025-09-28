@@ -1,0 +1,11 @@
+.logo {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background: var(--deep-dark);
+  padding: 1rem 0;
+}

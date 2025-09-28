@@ -1,0 +1,35 @@
+.main-nav {
+  top:155px;
+  right: 0;
+  position: absolute;
+  box-sizing: border-box;
+  height: 320%;
+  width: 35vw;
+  margin: 0;
+  background-color: rgb(44, 53, 43);
+  font-size: 1.2rem;
+}
+
+.main-nav a,
+.main-nav a:visited,
+.main-nav a:active {
+  display: block;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  color: var(---light-green);
+  text-decoration: none;
+}
+
+.main-nav .selected,
+.main-nav .selected:visited,
+.main-nav .selected:active {
+  color: var(--green);
+  background-color: var(--deep-dark);
+}
+
+.main-nav a:hover,
+.main-nav .selected:hover {
+  background-color: var(--green);
+  color: var(--deep-dark);
+}
+

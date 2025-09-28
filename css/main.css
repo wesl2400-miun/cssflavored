@@ -1,0 +1,27 @@
+.main {
+  max-width: 30%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0.5rem;
+  margin-bottom: 10%;
+}
+
+.main h1 {
+  font-size: 1.4rem;
+}
+
+.main h2 {
+  font-size: 1.2rem;
+}
+
+.main img {
+  width: 55vw;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color:rgb(110, 119, 107);
+  box-shadow: 5px 5px 5px var(--deep-dark);
+}
+
+.main p {
+  padding: 0.3rem 0;
+}

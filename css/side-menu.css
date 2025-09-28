@@ -1,0 +1,34 @@
+.side-menu {
+  box-sizing: border-box;
+  bottom: 120px;
+  right: 0;
+  position: absolute;
+  width: 35vw;
+  padding: 0.5rem;
+  background-color: rgb(51, 62, 42);
+  border-top: rgb(31, 51, 34) 2px solid;
+  border-bottom: rgb(31, 51, 34) 2px solid;
+}
+
+.side-menu h2 {
+  font-size: 1.1rem;
+}
+
+.side-menu ul li .selected {
+  color: var(--green);
+}
+
+.side-menu li, 
+.side-menu a, 
+.side-menu a:visited, 
+.side-menu a:active {
+  color: var(--light-green);
+  padding: 1rem 0rem;
+  font-size: 0.9rem;
+}
+
+.side-menu a:hover,
+.side-menu .selected:hover {
+  color: rgb(164, 199, 184);
+}
+
