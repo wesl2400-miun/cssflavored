@@ -1,6 +1,6 @@
 .side-menu {
   box-sizing: border-box;
-  bottom: 120px;
+  bottom: 125px;
   right: 0;
   position: absolute;
   width: 35vw;
@@ -11,7 +11,8 @@
 }
 
 .side-menu h2 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-style: italic;
 }
 
 .side-menu ul li .selected {
@@ -24,7 +25,6 @@
 .side-menu a:active {
   color: var(--light-green);
   padding: 1rem 0rem;
-  font-size: 0.9rem;
 }
 
 .side-menu a:hover,
@@ -32,3 +32,17 @@
   color: rgb(164, 199, 184);
 }
 
+
+@media screen and (max-width: 600px) {
+  .side-menu {
+    width: 100%;
+    position: static;
+  }
+  .side-menu ul {
+    position: static;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem
+  }
+}

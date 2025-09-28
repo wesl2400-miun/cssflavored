@@ -1,6 +1,8 @@
 .logo {
   box-sizing: border-box;
   width: 100%;
+  top: 10px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;

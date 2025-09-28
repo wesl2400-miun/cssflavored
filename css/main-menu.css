@@ -1,9 +1,8 @@
 .main-nav {
-  top:155px;
+  top:175px;
   right: 0;
   position: absolute;
   box-sizing: border-box;
-  height: 320%;
   width: 35vw;
   margin: 0;
   background-color: rgb(44, 53, 43);
@@ -33,3 +32,17 @@
   color: var(--deep-dark);
 }
 
+@media screen and (max-width: 600px) {
+  .main-nav, .main-nav ul {
+    width: 100%;
+    position: static;
+    display: flex;
+    justify-content: start;
+    align-items: center;;
+  }
+
+  .main-nav a {
+    height: 1.5rem;
+    line-height: 2rem;
+  }
+}

@@ -3,11 +3,18 @@
   box-sizing: border-box;
   float: left;
   padding: 0.5rem;
-  margin-bottom: 10%;
+  margin-top: 0.5rem;
+  margin-bottom: 20%;
 }
 
 .main h1 {
+  border-top-right-radius: 30px;
+  min-width: 220px;
+  box-sizing: border-box;
   font-size: 1.4rem;
+  padding: 1rem;
+  background-color: var(--deep-green);
+  border: 2px rgb(106, 137, 109) solid;
 }
 
 .main h2 {
@@ -15,6 +22,7 @@
 }
 
 .main img {
+  box-sizing: border-box;
   width: 55vw;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
@@ -24,4 +32,18 @@
 
 .main p {
   padding: 0.3rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    max-width: 99vw;
+  }
+
+  .main img {
+    width: 100%;
+  }
+
+  .main h1 {
+    font-size: 1.1rem;
+  }
 }
