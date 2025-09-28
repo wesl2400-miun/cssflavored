@@ -4,7 +4,10 @@
   font-size: 1.2rem;
   margin: 0;
   padding: 0;
-  background-color:  rgb(46, 73, 51);
+}
+
+.form fieldset {
+  background-color: var(--grayish);
 }
 
 .form input, select, textarea {
@@ -16,16 +19,18 @@
 
 .form .button {
   width: 100%;
-  color: rgb(234, 255, 234);
+  color: var(--deep-dark);
   background-image: url('../images/btn.svg');
   font-size: 1.1rem;
-  border: rgb(25, 30, 26) 2px solid;
+  border: var(--deep-dark) 2px solid;
   border-radius: 10px;
 }
 
 .form .button:hover {
-  color: rgb(25, 30, 26);
+  height: 40px;
+  color: var(--deep-dark);
   background-image: url('../images/btn-hover.svg');
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
@@ -33,3 +38,44 @@
    width: 95vw;
   }
 }
+
+/*
+**.form  { gäller element som stiliseras med klassen 'form'
+** box-sizing: border-box - använd behållarens hela utrymme fram till gränsytan, i motsats till content-box
+** som bara avänder utrymmet på själva innehållet
+** width: 55vw - sätt bredden till 55% av bredden på webbläsarens synliga fält
+** font-size: 1.2rem - sätt storleken på texten till 1.2 delar av standardstorleken på teckensnitt
+** (anges under :root i root.css filen)
+** margin: 0 - ta bort marginalerna
+** padding: 0 - ta bort extra utrymmet kring innehållet
+** .form fieldset { gäller alla fieldset taggar i element som stiliseras med klassen 'form'
+** background-color: var(--grayish) - sätt bakgrundsfärgen till det angivna värdet
+** .form input, select, textarea { gäller alla <input>, <select> och <taggar> i element som stiliseras med
+** klassen 'form'
+** width: 100% - sätt bredden till 100% av föräldraelementets bredd, alltså till 55vw (view port width)
+** eftersom detta är bredden på föräldraelementet 'form'
+** padding: 0.3rem 1rem - lägg till 0.3rem av extra utrymme kring innehållet vertikalt 
+** och 1rem av extra utrymme horisontellt
+** margin: 1rem 0 - sätt marginalerna till 1rem vertikalt och till 0px horisontellt (alltså, ta bort dem)
+** .form .button { - gäller alla element som stiliseras med klassen 'button' och omfattas av
+** element som stiliseras med klassen 'form'
+** color: [...] - sätt textfärgen till det angivna värdet till höger
+** background-image: url('../images/btn.svg') - använd bild som bakgrund; url anger här
+** sökvägen där bilden kan hittas
+** font-size: 1.1rem - sätt storleken på teckensnitt till 1.1 delar av standardstroleken
+** (anges under :root i root.css filen)
+** border: var(--deep-dark) 2px solid - lägg till inramning, färgen på inramningen ska vara --deep-dark
+** (definieras under :root i root.css filen), och tjockleken på inramningen 2 pixlar och inramningen
+** ska vara av typen 'solid'; det vill säga jämn, icke streckad.
+** border-radius: 10px - gör hörnen runt behållaren runda med 10 pixlar
+** .form .button:hover { gäller alla element som stiliseras med klassen 'button' och omfattas av
+** element som stiliseras med klassen 'form' samt täcks aktuellt av musmarkören
+** height: 40px - sätt höjden till 40 pixlar
+** cursor: pointer - använd musmarkören av typen 'pointer' (visar en pekfingerikon)
+** @media screen and (max-width: 600px) { exekvera CSS reglerna under @media query
+** enbart om den aktuella enheten är en skärm (det vill säga, inte en skrivare) och
+** dess maximala bredd är lika med eller mindre än 600px.
+** Detta @media query villkor utlöser den mobila versionen av designen
+** alla behållare som nämns undr @media query ska modifieras när villkoret uppfylls
+**
+*/

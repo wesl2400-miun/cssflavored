@@ -1,13 +1,13 @@
 .table {
   width: 55vw;
   border-collapse: collapse;
-  background-color: rgb(40, 59, 43);
+  background-color: var(--grayish);
   border: #212522 1px solid;
 }
 
 .table th, td {
-  padding: 0.3rem;
-  border: #859289 1px solid;
+  padding: 0.5rem;
+  border: var(--dark-green) 2px solid;
 }
 
 .table th {

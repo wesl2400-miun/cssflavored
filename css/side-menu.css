@@ -5,9 +5,9 @@
   position: absolute;
   width: 35vw;
   padding: 0.5rem;
-  background-color: rgb(51, 62, 42);
-  border-top: rgb(31, 51, 34) 2px solid;
-  border-bottom: rgb(31, 51, 34) 2px solid;
+  background-color: var(--greenish);
+  border-top: var(--deep-dark) 2px solid;
+  border-bottom: var(--deep-dark) 2px solid;
 }
 
 .side-menu h2 {

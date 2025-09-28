@@ -14,7 +14,7 @@
 
 .footer h3, p {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 0.9rem;
   padding: 0;
   margin: 0;
   color: var(--light-green);
@@ -29,3 +29,36 @@
 .footer a:hover {
   color: var(--mute-green);
 }
+
+/* .footer { - gäller element som stiliseras med klassen 'footer'
+** position: fixed - ta bort elementet från det normala layoutflödet
+** och placera det i relation till view port; det vill säga webbläsarens synliga fält
+** bottom: 0 - placera elementet 0 pixlar från webbläsarens synliga fält längs ner;
+** alltså längs ner i det synliga fältet
+** box-sizing: border-box - använd behållarens hela utrymme fram till gränsytan, i motsats till content-box
+** som bara avänder utrymmet på själva innehållet
+** width: 100% - sätt bredden till 100% av föräldraelementets bredd. Elementet 'main' är i det
+** här fallet elementets förälder och bredden på 'main' är satt till 100vw (view port width -
+** 100% av bredden på webbläsarens synliga fält)
+** display: flex - sätt elementets presentation till flex, alltså gör behållaren responsiv
+** och låt den anpassa sig dynamiskt till det lediga utrymmet
+** flex-direction: column stapla elementen inuti behållaren ovan på varandra i en kolumn
+** justify-content: center - centrera innehållet i behållaren vertikalt 
+** align-items: start - flytta innehållet horisontellt till vänster 
+** background-color: [...] - sätt bakgrundsfärgen till det angivna värdet
+** margin: 0 - ta bort marginalerna
+** padding: 1rem - lägg till 1rem av extra utrymme kring innheållet vertikalt och horisontellt
+** padding: 0 - ta bort extra utrymmet kring innehållet
+** .footer h3, p { gäller alla <h3> och <p> taggar i element som stiliseras med klassen 'footer'
+** font-weight: normal - ta bort fetstil från texten
+** font-size: 0.9rem - sätt textstorleken till 0.9 delar av standardstorleken på teckensnitt
+** (anges under :root i root.css filen)
+** color: [...] - sätt textfärgen till det angivna värdet
+** .footer a,
+** .footer a:visited, - gäller alla besökta <a> taggar (sådana som redan har klickats på) i behållare
+** som stiliseras med klassen 'footer' SAMT
+** .footer a:active { - alla aktiva <a> taggar (sådana som pressas) i beållare som stiliseras med
+** klassen 'footer'
+** .footer a:hover { - gäller alla <a> taggar i behållare som stiliseras med 
+** klassen 'footer' och sådana som aktuellt täcks av musmarkören
+*/

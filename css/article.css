@@ -2,3 +2,11 @@
   box-sizing: border-box;
   margin-bottom:  2.5rem;
 }
+
+/* ARTICLE
+** gäller element som stiliseras med klassen 'aticle'
+** box-sizing -använd behållarens hela utrymme fram till gränsytan, i motsats till content-box
+** som bara avänder utrymmet på själva innehållet
+** margin-bottom: 2.5rem - lägg en marginal på 2.5rem längst ner, 
+** alltså 2.5 delar av standardstorleken på teckensnitt (anges under :root i root.css filen)
+*/
