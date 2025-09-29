@@ -1,6 +1,6 @@
 .side-nav {
   top: 235px;
-  right: 0;
+  left: 0;
   position: absolute;
   box-sizing: border-box;
   width: var(--nav-width);
@@ -24,6 +24,7 @@
 }
 
 .side-nav a, 
+.side-nav a:link,
 .side-nav a:visited, 
 .side-nav a:active {
   color: var(--light-green);
@@ -75,7 +76,9 @@
 ** Detta behövs specifieras på det här sättet för att de inkluderade CSS reglerna ska gälla
 ** color: [...] - sätt textfärgen till det angivna värdet
 ** .side-nav li - gäller alla <li> taggar i element som har klassen 'side-nav'
-**.side-nav a, 
+**.side-nav a,  - gäller alla <a> taggar i element som har klassen 'side-nav' OCH
+** .side-nav a:link, gäller alla orörda <a> taggar (sådana som inte har klickats på) och finns inuti
+** element som har klassen 'side-nav'
 ** .side-nav a:visited, - gäller alla besökta <a> taggar i element som har klassen 'side-nav' OCH
 ** .side-nav a:active { - gäller alla <a> taggar som pressas 
 ** och är placerade i element som har klassen 'side-nav'

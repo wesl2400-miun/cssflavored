@@ -1,5 +1,6 @@
 .main-nav ul {
   bottom: -60px;
+  right: 186%;
   position: absolute;
   box-sizing: border-box;
   width: 35vw;
@@ -43,6 +44,7 @@
 }
 
 .main-nav a,
+.main-nav a:link,
 .main-nav a:visited,
 .main-nav a:active {
   margin: 0;
@@ -52,6 +54,7 @@
 }
 
 .main-nav .selected,
+.main-nav .selected:link,
 .main-nav .selected:visited,
 .main-nav .selected:active {
   color: var(--green);
@@ -87,6 +90,8 @@
 ** font-size: 1.2rem - sätt storleken på texten till 1.2 delar av standardstorleken på teckensnitt
 ** (anges uner :root i root.css filen)
 ** .main-nav a, - gäller alla <a> taggar i element som har klassen 'main-nav' OCH
+** .main-nav a:link, gäller alla orörda <a> taggar (sådana som inte har klickats på) och finns inuti
+** element som har klassen 'main-nav' OCH
 ** .main-nav a:visited, - alla besökta <a> taggar i element som har klassen 'main-nav' OCH
 **.main-nav a:active { alla <a> taggar som pressas och finns i element som har klassen 'main-nav'
 ** margin: 0 - ta bort marginalerna
@@ -96,6 +101,8 @@
 ** text-decoration: none - ta bort understreck från texten
 ** .main-nav .selected, - gäller alla ellement som har klassen 'selected' och är placerade i element
 ** som har kllasen 'main-nav' OCH
+** .main-nav .selected:link, - alla orörda <a> taggar (sådana som inte har klickats på), har
+** klassen 'selected' och finns inuti element som har klassen 'main-nav'
 ** .main-nav .selected:visited, - alla besökta länkar som har klassen 'selected' oh är placerade i
 ** element som har klassen 'main-nav' OCH
 ** .main-nav .selected:active { alla länkar som har klassen 'selected' och pressas och är placerade

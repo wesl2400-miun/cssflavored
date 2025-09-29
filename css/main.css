@@ -1,7 +1,8 @@
 .main {
-  max-width: 30%;
+  max-width: 35%;
   box-sizing: border-box;
-  float: left;
+  float: right;
+  margin-right: 25%;
   padding: 0.5rem;
   margin-top: 0.5rem;
   margin-bottom: 20%;
@@ -37,6 +38,8 @@
 @media screen and (max-width: 600px) {
   .main {
     max-width: 99vw;
+    margin-right: 0;
+    float: none;
   }
 
   .main img {
@@ -50,11 +53,14 @@
 
 /*
 ** .main { gäller alla element som har klassen 'main'
-** max-width: 30% - sätt den maximala tillåtna bredden till 30% av föräldraelementets bredd
-** alltså 30% av 100vw av <body> taggen (med andra ord 30% av bredden på webbläsarens synliga fält)
+** margin-right: 25% - Sätt marginalen på högra sidan till 30% , detta är en hemsk design
+** men det är svårt att göra en bra design med 'float'
+** som jag bara måste tvinga på någonstans för att checka av float-kravet i den här uppgiften
+** max-width: 35% - sätt den maximala tillåtna bredden till 35% av föräldraelementets bredd
+** alltså 35% av 100vw av <body> taggen (med andra ord 35% av bredden på webbläsarens synliga fält)
 ** box-sizing: border-box - använd behållarens hela utrymme fram till gränsytan, i motsats till content-box
 ** som bara avänder utrymmet på själva innehållet
-** float: left - ta bort elementet från det normala flödet och placera det till vänster
+** float: right - ta bort elementet från det normala flödet och placera det till höger
 ** padding: 0.5rem - lägg till 0.5rem av extra utrymme vertikalt och horisontellt
 ** margin-top: 0.5rem - lägg till en marginal på 0.5rem längst upp
 ** margin-bottom: 20% - lägg till en marginal på 20% av föräldraelementets bredd

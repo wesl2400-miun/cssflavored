@@ -1,4 +1,4 @@
-.footer {
+#footer {
   position: fixed;
   bottom: 0;
   box-sizing: border-box;
@@ -12,7 +12,7 @@
   padding: 1rem;
 }
 
-.footer h3, p {
+#footer h3, p {
   font-weight: normal;
   font-size: 0.9rem;
   padding: 0;
@@ -20,17 +20,21 @@
   color: var(--light-green);
 }
 
-.footer a,
-.footer a:visited,
-.footer a:active {
+#footer a,
+#footer a:visited,
+#footer a:active {
   color: var(--green);
 }
 
-.footer a:hover {
+#footer a:hover {
   color: var(--mute-green);
 }
 
-/* .footer { - gäller element som stiliseras med klassen 'footer'
+.span {
+  font-style: italic;
+}
+
+/* #footer { - gäller bara det unika elementet med ID:et 'footer'
 ** position: fixed - ta bort elementet från det normala layoutflödet
 ** och placera det i relation till viewport; det vill säga webbläsarens synliga fält
 ** Också, inget extra utrymme reseveras för elementet som i fallet av 'relative' positionering
@@ -51,16 +55,18 @@
 ** margin: 0 - ta bort marginalerna
 ** padding: 1rem - lägg till 1rem av extra utrymme kring innheållet vertikalt och horisontellt
 ** padding: 0 - ta bort extra utrymmet kring innehållet
-** .footer h3, p { gäller alla <h3> och <p> taggar i element som stiliseras med klassen 'footer'
-** font-weight: normal - ta bort fetstil från texten
+** #footer h3, p { gäller alla <h3> och <p> taggar som
+** finns inuti behållaren med det unika ID:et 'footer'
 ** font-size: 0.9rem - sätt textstorleken till 0.9 delar av standardstorleken på teckensnitt
 ** (anges under :root i root.css filen)
 ** color: [...] - sätt textfärgen till det angivna värdet
-** .footer a,
-** .footer a:visited, - gäller alla besökta <a> taggar (sådana som redan har klickats på) i behållare
-** som stiliseras med klassen 'footer' SAMT
-** .footer a:active { - alla aktiva <a> taggar (sådana som pressas) i beållare som stiliseras med
-** klassen 'footer'
-** .footer a:hover { - gäller alla <a> taggar i behållare som stiliseras med 
-** klassen 'footer' och sådana som aktuellt täcks av musmarkören
+** #footer a, - gäller alla <a> taggar som finns inuti behållaren med ID:et 'footer' OCH
+** #footer a:visited, - gäller alla besökta <a> taggar (sådana som redan har klickats på) som
+** finns inuti behållaren med det unika ID:et 'footer' OCH
+** #footer a:active { - alla aktiva <a> taggar (sådana som pressas) som
+** finns inuti behållaren med det unika ID:et 'footer'
+** #footer a:hover { - gäller alla <a> taggar som finns inuti behållaren 
+** med det unika ID:et 'footer' och sådana som aktuellt täcks av musmarkören
+** .span { - gäller alla element som har klassen 'span'
+** font-style: italic - gör texten kursiv
 */
