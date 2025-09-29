@@ -1,0 +1,122 @@
+.main-nav ul {
+  bottom: -60px;
+  position: absolute;
+  box-sizing: border-box;
+  width: 35vw;
+  margin: 0;
+  background-color: var(--dark-green);
+  font-size: 1.2rem;
+}
+
+.main-nav a,
+.main-nav a:visited,
+.main-nav a:active {
+  display: block;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  color: var(---light-green);
+  text-decoration: none;
+}
+
+.main-nav .selected,
+.main-nav .selected:visited,
+.main-nav .selected:active {
+  color: var(--green);
+  background-color: var(--deep-dark);
+}
+
+.main-nav a:hover,
+.main-nav .selected:hover {
+  background-color: var(--green);
+  color: var(--deep-dark);
+}
+
+.main-nav {
+  top:175px;
+  right: 0;
+  position: absolute;
+  box-sizing: border-box;
+  width: var(--nav-width);
+  margin: 0;
+  background-color: var(--dark-green);
+  font-size: 1.2rem;
+}
+
+.main-nav a,
+.main-nav a:visited,
+.main-nav a:active {
+  margin: 0;
+  padding: 1rem 0.5rem;
+  color: var(---light-green);
+  text-decoration: none;
+}
+
+.main-nav .selected,
+.main-nav .selected:visited,
+.main-nav .selected:active {
+  color: var(--green);
+  background-color: var(--deep-dark);
+}
+
+.main-nav a:hover {
+  background-color: var(--green);
+  color: var(--deep-dark);
+}
+
+@media screen and (max-width: 600px) {
+  .main-nav, .main-nav ul {
+    width: 100%;
+    position: static;
+    display: flex;
+    justify-content: start;
+    align-items: center;;
+  }
+}
+
+/*
+**.main-nav { gäller alla element som stiliseras med klassen 'main-nav'
+** position: absolute - elementet tas bort från layoutens normala flöde och placeras i relation
+** till det närmaste föräldraelementet förutsatt att föräldraelementet har en annan position än
+** den statiska. I det här fallet placeras 'main-nav' i förhållandet till 'nav' behållarens placering
+** bottom: -60px - placera elementet 60 pixlar nedanför föräldraelementets nedersta sidan
+** box-sizing: border-box - använd behållarens hela utrymme fram till gränsytan, i motsats till content-box
+** som bara avänder utrymmet på själva innehållet
+** width: [...] - sätt bredden till det angivna värdet
+** margin: 0 - ta bort marginalerna
+** background-color: [...] - sätt bakgrundsfärgen till det angivna värdet
+** font-size: 1.2rem - sätt storleken på texten till 1.2 delar av standardstorleken på teckensnitt
+** (anges uner :root i root.css filen)
+** .main-nav a, - gäller alla <a> taggar i element som har klassen 'main-nav' OCH
+** .main-nav a:visited, - alla besökta <a> taggar i element som har klassen 'main-nav' OCH
+**.main-nav a:active { alla <a> taggar som pressas och finns i element som har klassen 'main-nav'
+** margin: 0 - ta bort marginalerna
+** padding: 1rem 0.5rem - lägg till 1rem av extra utrymme krin innehållet vertikalt och 0.5rem av
+** extra utrymme horisontellt
+** color: [...] - sätt textfärgen till det angivna värdet
+** text-decoration: none - ta bort understreck från texten
+** .main-nav .selected, - gäller alla ellement som har klassen 'selected' och är placerade i element
+** som har kllasen 'main-nav' OCH
+** .main-nav .selected:visited, - alla besökta länkar som har klassen 'selected' oh är placerade i
+** element som har klassen 'main-nav' OCH
+** .main-nav .selected:active { alla länkar som har klassen 'selected' och pressas och är placerade
+** i element som har klassen 'main-nav'
+** .main-nav a:hover, - gäller alla <a> taggar som aktuellt täcks av musmarkören och är placerade i
+** element som har klassen  'main-nav'
+** @media screen and (max-width: 600px) { exekvera CSS reglerna under @media query
+** enbart om den aktuella enheten är en skärm (det vill säga, inte en skrivare) och
+** dess maximala bredd är lika med eller mindre än 600px.
+** Detta @media query villkor utlöser den mobila versionen av designen
+** alla behållare som nämns undr @media query ska modifieras när villkoret uppfylls
+** .main-nav, .main-nav ul { gäller alla element som har klassen 'main-nav' OCH alla <ul> taggar
+** som är placerade i element 'main-nav'
+** width: 100% - sätt bredden till 100% av föräldraelementets bredd
+** position: static - sätt positionen till statisk; alltså placera elementet enligt det normala
+** layout flödet. Detta är utgångsvärdet för alla element, men eftersom positionen för 'main-nav'
+** har ändrats till positionen absolute, måste det nollställas när den mobila designen utlöses
+** display: flex - sätt elementets presentation till flex, alltså gör behållaren responsiv
+** och låt den anpassa sig dynamiskt till det lediga utrymmet
+** flex-direction - utgångsvärdet är alltid 'row' så detta behöver inte specificeras explicit.
+** Elementen ska läggas vid sidan av varandra.
+** justify-content: start - lägg innehållet horisontellet till vänster i behållaren
+** align-items: centrera - centrera innehållet  i behållaren vertikalt
+*/

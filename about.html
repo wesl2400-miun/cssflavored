@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="./images/webicon.svg">
     <link rel="preload" href="./css/root.css" as="style">
     <link rel="stylesheet" href="./css/root.css">
-     <link rel="stylesheet" href="./css/main-menu.css">
+    <link rel="stylesheet" href="./css/main-nav.css">
     <link rel="stylesheet" href="./css/logo.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -18,14 +18,16 @@
         <img src="./images/logo.svg" alt="Webbexpert Logotypen">
       </a>
     </header>
-    <nav class="main-nav" aria-label="Huvudmeny">
-      <ul>
-        <li><a href="./courses.html">Kurser</a></li>
-        <li><a href="./pictures.html">Bilder</a></li>
-        <li><a href="./contact.html">Kontakt</a></li>
-        <li><a class="selected" href="./about.html">Om</a></li>
-      </ul>
-    </nav>
+    <div class="nav">
+      <nav class="main-nav" aria-label="Huvudmeny">
+        <ul>
+          <li><a href="./courses.html">Kurser</a></li>
+          <li><a href="./pictures.html">Bilder</a></li>
+          <li><a href="./contact.html">Kontakt</a></li>
+          <li><a class="selected" href="./about.html">Om</a></li>
+        </ul>
+      </nav>
+    </div>
     <main class="main">
       <h1 class="title">Om mig</h1>
       <h2>Vem står bakom Webbexpert?</h2>
@@ -50,7 +52,14 @@
 ** Den anger varaiabler under :root och CSS regler för hela <body> taggen
 ** <link rel="stylesheet" href="./css/root.css"> - hämta CSS stil (rel='stylesheet') via
 ** den angivna relativa sökvägen (href='[...]')
-**
+** <link rel="stylesheet" href="[...]"> Hämta den agivna CSS stilen. 'href' attributet definierar
+** sökvägen där CSS stilen går att hitta
+** <div class="nav"> - lade till en generisk <div> tagg och som har klassen 'nav'
+** Denna behållare har ingen semantisk betydelse och finns här bara i syfte
+** att demonstrera hur CSS reglerna: 'position: relative' och 'position: absolute' fungerar
+** För att 'position: absolute' ska fungera för <nav> taggarna måste de finnas inuti en behållare som
+** själv använder icke statisk positionering. Annars finns det risk att den avsedda positioneringen
+** för både 'main-nav' och 'side-nav' inte fungerar.
 -->
 
 <!-- GAMLA KOMMENTARER - Relterar till uppgift 2.2

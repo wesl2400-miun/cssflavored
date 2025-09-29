@@ -8,6 +8,7 @@
   --dark-green: #425e3a;
   --dark: #3a423c;
   --deep-dark: #212522;
+  --nav-width: 35vw;
   font-size: 16px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -27,8 +28,43 @@ ul {
   margin: 0;
 }
 
+.nav {
+  box-sizing: border-box;
+  position: relative;
+}
 
-
+/*
+** :root { gäller hela HTML dokumentet
+** --[variable-name]: [...] - definiera en återanvändbar variabel med det angivna värdet
+** --nav-width: 35vw - sätt variabeln till 35 viewport width, alltså 35% av bredden på webbläsarens
+** synliga fält
+** font-size: 16px - sätt standardstorleken på teckensnitt 16px. Detta är oftast basstorleken för rem-måttet.
+** font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif -
+** Försök hämta alla dessa teckensnitt i tur och ordning i fall något av dessa inte går att hämta.
+** Det vill säga om Trebuchet MS inte finns på enheten, försök med Lucida Sans Unicode, om den inte heller
+** går att hämta försök med de andra teckensnitt och i värsta fallet använd vilket teckensnitt som helst
+** av typen 'sans-serif'.
+** body { gäller alla element i <body> taggen
+** width: 100vw - sätt bredden till 100% av bredden på webbläsarens synliga fält
+** margin: 0 - ta bort marginalerna
+** padding: 0 - ta bort extra utrymmet kring innehållet
+** background: [...] - sätt bakgrundsfärgen till det angivna värdet
+** color: [...] - sätt textfärgen till det angivna värdet
+** text-align: start - placera texten på vänsta sidan
+** ul { - gäller alla oordnade listor
+** list-style: none - ta bort kulpunkterna från listorna
+** --nav-width - sätt variabeln till 35vw (viewport width, alltså 35 % av bredden 
+** på webbläsarens synliga fält)
+** .nav { gäller alla element som stiliseras med klassen 'nav'
+** position: relative - ta bort elementet från dess normala layoutflöde och placera det
+** i relationen till sitt ursprungliga placering i det normala flödet OCKSÅ
+** utrymmet som beräknas för den ursprungliga positionen stannar kvar
+** Till exempel: Om elementet sitter längst upp till höger, ska elementet flyttas från den här positionen
+** Och utrymmet för dess ursprungliga placeringen finns fortfarande reserverad för elementet i fråga
+** 'nav' klassen behövs egentligen inte, men har skapats i syfte att demonstrera hur position: relative
+** position: absolute fungerar
+** Referens: https://developer.mozilla.org/en-US/docs/Web/CSS/position
+*/
 
 
 

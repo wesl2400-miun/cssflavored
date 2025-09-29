@@ -1,0 +1,110 @@
+.side-nav {
+  top: 235px;
+  right: 0;
+  position: absolute;
+  box-sizing: border-box;
+  width: var(--nav-width);
+  padding: 0.5rem;
+  background-color: var(--greenish);
+  border-top: var(--deep-dark) 2px solid;
+  border-bottom: var(--deep-dark) 2px solid;
+}
+
+.side-nav h2 {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.side-nav ul li .selected {
+  color: var(--green);
+}
+
+.side-nav li {
+  padding: 1rem 0;
+}
+
+.side-nav a, 
+.side-nav a:visited, 
+.side-nav a:active {
+  color: var(--light-green);
+}
+
+.side-nav a:hover,
+.side-nav .selected:hover {
+  color: rgb(164, 199, 184);
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .side-nav {
+    width: 100%;
+    position: static;
+  }
+
+  .side-nav ul {
+    position: static;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem
+  }
+}
+
+/*
+**.side-nav { gäller alla element som har klassen 'side-nav'
+** position: absolute - elementet tas bort från layoutens normala flöde och placeras i relation
+** till det närmaste föräldraelementet förutsatt att föräldraelementet har en annan position än
+** den statiska. I det här fallet placeras 'side-nav' i förhållandet till 'nav' behållarens placering
+** top: 235px - placera elementets överkant 235 pixlar nedanför föräldraelementets överkant
+** box-sizing: border-box - använd behållarens hela utrymme fram till gränsytan, i motsats till content-box
+** som bara avänder utrymmet på själva innehållet
+** width: [...] - sätt bredden till det angivna värdet
+** padding: 0.5rem - lägg till 0.5rem av extra utrymme vertikalt och horisontellt
+** background-color: [...] - sätt bakgrundsfärgen till det angivna värdet
+** border-top: var(--deep-dark) 2px solid - lägg till inramningen längst upp,
+** färgen på inramningen ska vara --deep-dark och 2 pixlar tjock samt jämn och icke streckad
+** border-bottom: var(--deep-dark) 2px solid - lägg till inramningen längst ner,
+** färgen på inramningen ska vara --deep-dark och 2 pixlar tjock samt jämn och icke streckad
+** .side-nav h2 { gäller alla <h2> taggar i element som har klassen 'side-nav'
+** font-size: 1.2rem - sätt storleken på texten till 1.2 delar av standardstorleken på teckensnitt
+** (anges uner :root i root.css filen)
+** font-style: italic - gör texten kursiv
+** .side-nav ul li .selected { - gäller alla element som har klassen 'selected' och finns i
+** <li> taggar som finns i oordnade listor som har klassen 'side-nav'
+** Detta behövs specifieras på det här sättet för att de inkluderade CSS reglerna ska gälla
+** color: [...] - sätt textfärgen till det angivna värdet
+** .side-nav li - gäller alla <li> taggar i element som har klassen 'side-nav'
+**.side-nav a, 
+** .side-nav a:visited, - gäller alla besökta <a> taggar i element som har klassen 'side-nav' OCH
+** .side-nav a:active { - gäller alla <a> taggar som pressas 
+** och är placerade i element som har klassen 'side-nav'
+** padding: 1rem 0 - lägg till 1rem av extra utrymme kring inehållet vertikalt och ta bort extra
+** utrymmet horisontellt
+** .side-nav a:hover, - gäller  alla <a> taggar som aktuellet täcks av musmarkören och som finns
+** i element som har klassen 'side-nav'
+** .side-nav .selected:hover - gäller alla element som har klassen 'selected', täcks aktuellt av
+** musmarkören och finns i element som har klassen 'side-nav'
+** @media screen and (max-width: 600px) { exekvera CSS reglerna under @media query
+** enbart om den aktuella enheten är en skärm (det vill säga, inte en skrivare) och
+** dess maximala bredd är lika med eller mindre än 600px.
+** Detta @media query villkor utlöser den mobila versionen av designen
+** alla behållare som nämns undr @media query ska modifieras när villkoret uppfylls
+** .side-nav { gäller alla element som har klassem 'side-nav'
+** width: 100% - sätt bredden till 100% av bredden på föräldraelementet. I det här fallet har 'nav'
+** behållaren ingen bredd definierad så elementen tar över efter <body> taggen som är föräldraelementet
+** till 'nav' behållaren
+** position: static - sätt positionen till statisk; alltså placera elementet enligt det normala
+** layout flödet. Detta är utgångsvärdet för alla element, men eftersom positionen för 'main-nav'
+** har ändrats till positionen absolute, måste det nollställas när den mobila designen utlöses
+** .side-nav ul { gäller alla oordnade listor (ul taggar) som är placerade i 
+** element som har klassen'side-nav'
+** display: flex - sätt elementets presentation till flex, alltså gör behållaren responsiv
+** och låt den anpassa sig dynamiskt till det lediga utrymmet
+** flex-direction - utgångsvärdet är alltid 'row' så detta behöver inte specificeras explicit.
+** Elementen ska läggas vid sidan av varandra.
+** justify-content: start - lägg innehållet horisontellet till vänster i behållaren
+** align-items: centrera - centrera innehållet  i behållaren vertikalt
+** gap: 0.5rem - lägg till 0.5rem av extra avstånd mellan elementen placerade i flexboxen, alltså
+** den oordnade listan i 'side-nav' behållaren
+*/

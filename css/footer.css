@@ -32,7 +32,9 @@
 
 /* .footer { - gäller element som stiliseras med klassen 'footer'
 ** position: fixed - ta bort elementet från det normala layoutflödet
-** och placera det i relation till view port; det vill säga webbläsarens synliga fält
+** och placera det i relation till viewport; det vill säga webbläsarens synliga fält
+** Också, inget extra utrymme reseveras för elementet som i fallet av 'relative' positionering
+** Referens: https://developer.mozilla.org/en-US/docs/Web/CSS/position
 ** bottom: 0 - placera elementet 0 pixlar från webbläsarens synliga fält längs ner;
 ** alltså längs ner i det synliga fältet
 ** box-sizing: border-box - använd behållarens hela utrymme fram till gränsytan, i motsats till content-box

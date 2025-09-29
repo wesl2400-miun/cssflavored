@@ -2,7 +2,6 @@
   width: 55vw;
   border-collapse: collapse;
   background-color: var(--grayish);
-  border: #212522 1px solid;
 }
 
 .table th, td {
@@ -23,3 +22,23 @@
     font-size: 0.9rem;
   }
 }
+
+/*
+** .table { gäller alla element som har klassen 'table'
+** width: 55vw - sätt bredden till 55% av bredden på webbläsarens synliga fält (viewport)
+** border-collapse: collapse;
+** background-color: [...] - sätt bakgrundsfärgen till det angivna värdet
+** .table th, td { gäller alla <th> och <td> taggar som omfattas av element som har klassen 'table'
+** padding: 0.5rem - lägg till 0.5rem av extra utrymme kring innehållet vertikalt och horisontellt
+** border: var(--dark-green) 2px solid - lägg till inramningen,
+** färgen på inramningen ska vara --deep-green och 2 pixlar tjock samt jämn och icke streckad
+** .table th { gäller alla <th> taggar i element som har klassen 'table'
+** font-size: 1.2rem - sätt textstorleken till 1.2 delar av standardstorleken på teckensnittet 
+** (definieras under :root i root.css filen)
+** @media screen and (max-width: 600px) { exekvera CSS reglerna under @media query
+** enbart om den aktuella enheten är en skärm (det vill säga, inte en skrivare) och
+** dess maximala bredd är lika med eller mindre än 600px.
+** Detta @media query villkor utlöser den mobila versionen av designen
+** alla behållare som nämns undr @media query ska modifieras när villkoret uppfylls
+** width: 100% - sätt bredden till 100% av föräldraelementets bredd
+**/

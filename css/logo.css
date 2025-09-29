@@ -1,8 +1,6 @@
 .logo {
   box-sizing: border-box;
   width: 100%;
-  top: 10px;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,3 +8,20 @@
   background: var(--deep-dark);
   padding: 1rem 0;
 }
+
+/* .logo { gäller alla element som stiliseras med klassen 'logo'
+** box-sizing: border-box - använd behållarens hela utrymme fram till gränsytan, i motsats till content-box
+** som bara avänder utrymmet på själva innehållet
+** width: 100% - sätt bredden till 100% av földraelementets bredd. Föräldraelementet till 'logo'
+** behållaren är i det här fallet <body> taggen, så bredden är 100vw (view port width - 100%
+** av webbläsarens synliga fält)
+** display: flex - sätt elementets presentation till flex, alltså gör behållaren responsiv
+** och låt den anpassa sig dynamiskt till det lediga utrymmet
+** flex-direction: column stapla elementen inuti behållaren ovan på varandra i en kolumn
+** justify-content: center - centrera innehållet i behållaren vertikalt 
+** align-items: start - flytta innehållet horisontellt till vänster 
+** background-color: [...] - sätt bakgrundsfärgen till det angivna värdet 
+** padding: 1rem 0 - lägg till 1rem av extra utrymme krin innehållet vertikalt och 0 pixlar/rem horisontellt
+** (alltså ta bort det extra utrymmet kring innehållet horisontellt)
+**
+*/

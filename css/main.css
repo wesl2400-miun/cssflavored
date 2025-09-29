@@ -14,7 +14,7 @@
   font-size: 1.4rem;
   padding: 1rem;
   background-color: var(--vivid-green);
-  border: 2px rgb(106, 137, 109) solid;
+  border: 2px var(--mute-green) solid;
 }
 
 .main h2 {
@@ -47,3 +47,41 @@
     font-size: 1.1rem;
   }
 }
+
+/*
+** .main { gäller alla element som har klassen 'main'
+** max-width: 30% - sätt den maximala tillåtna bredden till 30% av föräldraelementets bredd
+** alltså 30% av 100vw av <body> taggen (med andra ord 30% av bredden på webbläsarens synliga fält)
+** box-sizing: border-box - använd behållarens hela utrymme fram till gränsytan, i motsats till content-box
+** som bara avänder utrymmet på själva innehållet
+** float: left - ta bort elementet från det normala flödet och placera det till vänster
+** padding: 0.5rem - lägg till 0.5rem av extra utrymme vertikalt och horisontellt
+** margin-top: 0.5rem - lägg till en marginal på 0.5rem längst upp
+** margin-bottom: 20% - lägg till en marginal på 20% av föräldraelementets bredd
+** .main h1 { gäller alla <h1> taggar i element som har klassen 'main'
+** border-top-right-radius: 30px - gör hörnet på högra sidan längst upp runt med 30 pixlar
+** min-width: 220px - sätt den minimala tillåtna bredden till 220 pixlar. Behållaren kommer inte 
+** krympa mer än det angivna värdet
+** font-size: 1.4rem - sätt textstorleken till 1.4 delar av standardstorleken på teckensnitt
+** (anges under :root i root css filen)
+** padding: 1rem - lägg till 1rem av extra utrymme kring innehållet vertikalt och horisontellt
+** background-color: [...] - sätt bakgrundsfärgen till det angivna värdet
+** border: 2px var(--mute-green) solid - lägg till inramningen på elementet, som är 2 pixlar tjock, 
+** har --mute-green färg och är jämn och icke streckad
+** .main h2 { gäller alla <h2> taggar i element som har klassen 'main'
+** .main img { gäller alla <img> taggar i element som har klassen 'main'
+** width: 55vw - sätt bredden till 55vw (view port width), alltså 55% av bredden på webbläsarens
+** synliga fält
+** box-shadow: 5px 5px 5px var(--deep-dark) - lägg till skuggan kring elementet, 
+** 5 pixlar av horisontellt skuggavstånd, 5 pixlar av vertikalt skuggavstånd och 5 pixlar av suddighet,
+** skuggans färg ska vara --deep-dark
+** .main p { - gäller alla <p> taggar (paragrafer) i element som har klassen 'main'
+** @media screen and (max-width: 600px) { exekvera CSS reglerna under @media query
+** enbart om den aktuella enheten är en skärm (det vill säga, inte en skrivare) och
+** dess maximala bredd är lika med eller mindre än 600px.
+** Detta @media query villkor utlöser den mobila versionen av designen
+** alla behållare som nämns undr @media query ska modifieras när villkoret uppfylls
+** width: 100% - sätt bredden till 100% av föräldraelementets bredd
+** max-width: 99vw - sätt den maximala tillåtna bredden till 99 viewport width 
+** (99% av bredden på webbläsarens synliga fält)
+*/
