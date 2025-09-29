@@ -15,7 +15,7 @@
   display: block;
   margin: 0;
   padding: 1rem 0.5rem;
-  color: var(---light-green);
+  color: var(--light-green);
   text-decoration: none;
 }
 
@@ -49,7 +49,7 @@
 .main-nav a:active {
   margin: 0;
   padding: 1rem 0.5rem;
-  color: var(---light-green);
+  color: var(--light-green);
   text-decoration: none;
 }
 
